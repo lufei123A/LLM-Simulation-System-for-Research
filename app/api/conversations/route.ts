@@ -7,6 +7,7 @@ export async function GET(request: NextRequest) {
   console.log('APP_ID:', APP_ID)
   console.log('API_KEY:', API_KEY)
   console.log('API_URL:', API_URL)
+  console.log('Client:', client)
   const { sessionId, user } = getInfo(request)
   try {
     const { data }: any = await client.getConversations(user)
